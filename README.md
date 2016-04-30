@@ -1,6 +1,6 @@
 [![axisj-contributed](https://img.shields.io/badge/AXISJ.com-Contributed-green.svg)](https://github.com/axisj) ![](https://img.shields.io/badge/Seowoo-Mondo&Thomas-red.svg)
 
-# gulp-marko-ax5
+# gulp-marko-axu
 
 > Render marko template
 
@@ -10,7 +10,7 @@ marko website is http://markojs.com/
 ##Install
 
 ```shell
-npm install gulp-marko-ax5 --save-dev
+npm install gulp-marko-axu --save-dev
 ```
 
 ## Usage
@@ -34,11 +34,11 @@ Hello ${data.name}!
 
 ```js
 var gulp = require('gulp');
-var marko_ax5 = require('gulp-marko-ax5');
+var marko_axu = require('gulp-marko-axu');
 
 gulp.task('default', function () {
 	return gulp.src('/src/*.html')
-        .pipe(marko_ax5({name: 'Thomas', colors: ["red", "green", "blue"]}))
+        .pipe(marko_axu({name: 'Thomas', colors: ["red", "green", "blue"]}))
         .pipe(gulp.dest('dist'));
 });
 ```
@@ -47,11 +47,11 @@ You can alternatively use set option
 
 ```js
 var gulp = require('gulp');
-var marko_ax5 = require('gulp-marko-ax5');
+var marko_axu = require('gulp-marko-axu');
 
 gulp.task('default', function () {
 	return gulp.src('src/*.html')
-        .pipe(marko_ax5(
+        .pipe(marko_axu(
             {name: 'Thomas', colors: ["red", "green", "blue"]},
             {
                 options: { // is marko compile option
@@ -86,13 +86,13 @@ And you can use with [gulp-changed](https://github.com/sindresorhus/gulp-changed
 
 ```js
 var gulp = require('gulp');
-var marko_ax5 = require('gulp-marko-ax5');
+var marko_axu = require('gulp-marko-axu');
 var changed = require('gulp-changed');
 
 gulp.task('default', function () {
     gulp.src(PATHS.ax5core.doc_src + '/**/*.html')
         .pipe(changed(PATHS.ax5core.doc_dest))
-        .pipe(marko_ax5({
+        .pipe(marko_axu({
             projectName: "ax5core",
             layoutPath: PATHS.assets.src + '/_layouts/index.marko'
         }))
@@ -123,7 +123,7 @@ gulp.task('default', function () {
 
 ## API
 
-### marko_ax5(data, [options])
+### marko_axu(data, [options])
 
 Render a template using the provided `data`.
 

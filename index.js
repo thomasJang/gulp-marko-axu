@@ -14,7 +14,7 @@ function compile(options, data) {
         }
 
         if (file.isStream()) {
-            cb(new gutil.PluginError('gulp-marko-ax5', 'Streaming not supported'));
+            cb(new gutil.PluginError('gulp-marko-axu', 'Streaming not supported'));
             return;
         }
 
